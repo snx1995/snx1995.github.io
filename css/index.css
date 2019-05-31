@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 100% 0, #3498db, #1abc9c);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.main {
+    box-sizing: border-box;
+    padding: 100px 0;
+    width: 100%;
+}
+.inner {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 12px 24px rgba(7, 17, 27, .2);
+}
+.main > h1 {
+    margin: 50px 0 100px 0;
+    font-size: 72px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.main > h1::before {
+    content: "by bantasy";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+section.style1 {
+    display: flex;
+    flex-direction: column;
+}
+section.style1 .img-container{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+section.style1 .img-container img {
+    width: 100%;
+    height: auto;
+}
+section.style1 p {
+    background: #fff;
+}
+section.style1 > article {
+    background: #fff;
+}
+section.style1 > article .title-container {
+    padding: 30px 0;
+}
+section.style1 > article .title {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    font-size: 1.8em;
+}
+section.style1 > article .title::before {
+    content: "----------";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bdc3c7;
+    font-weight: 100;
+    font-size: .8em;
+}
+section.style1 > article .subtitle {
+    text-align: center;
+    padding: 20px;
+    color: #bdc3c7;
+    font-size: .8em;
+    letter-spacing: 5px;
+}
+section.style1 > article p {
+    background: #ecf0f1;
+    padding: 40px;
+    line-height: 2em;
+    color: #7f8c8d;
+    text-indent: 1em;
+}
