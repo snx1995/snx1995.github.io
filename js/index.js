@@ -1,6 +1,7 @@
 (function () {
     const createElement = document.createElement.bind(document);
     const container = document.querySelector(".inner");
+    const cons = document.querySelector(".console");
 
     container.appendChild(newStyle1("./img/pic02.jpg", "静水流深", "人间初静，秋水娉婷", "当走出机舱，又一次来到这座熟悉的城市、呼吸着这久违的空气、踏上这曾经走过的土地、听见这熟悉的口音，我心情有些低落，微微地叹了一口气。我又回来了，仿佛做了一个美妙的梦，终于到了梦醒时分。说实话，我真的不想回来，但我不得不回来。回来后迎接我的是枯燥的工作、无趣的同事、一成不变的日子，我很不喜欢这样的生活，却没有办法改变，毕竟我没有钱，无法洒脱。每一次旅行，都好似上天给我一个做梦的机会，我可以做各式各样的梦。在放假的那些日子，我快乐极了、我幸福极了，如果能一直这样流浪下去该多好，但我却无法真正实现逍遥游，因为现实不允许，我还得工作，还得还房贷，还得养家。"))
     container.appendChild(newStyle2(["./img/pic01.jpg", "./img/pic03.jpg", "./img/pic04.jpg", "./img/pic05.jpg"], "静水流深", "人间初静，秋水娉婷"))
@@ -19,6 +20,15 @@
         }
     ]));
     
+    cons.addEventListener("keydown", event => {
+        if (event.keyCode == 13) {
+            const ins = cons.value;
+            axios.get(`/do/console?i=${ins}`).then(res => {
+                
+            })
+        }
+    })
+
     function newStyle1(img, title, subtitle, article) {
         const section = createElement("section");
         section.classList.add("style1");
