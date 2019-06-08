@@ -5,17 +5,16 @@ const express = require("express");
 const logger = require("./logger");
 const filter = require("./server/system/filters");
 
-const AuthorityController = require("./server/controller/authority/authority");
-
 const TAG = "MAIN";
-
 const app = express();
 
-registerController("/auth", AuthorityController);
+registerController("/auth", require("./server/controller/authority/authority"));
+registerController("/", require("./server/controller/console"));
 
 app.listen(55088);
 
 function registerController(base, controller) {
+    base = (!base || base == "/") ? "" : base;
     for (let path in controller) {
         if (controller.hasOwnProperty(path)) {
             const ctrller = controller[path];
