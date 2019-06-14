@@ -43,14 +43,6 @@ MongoDB.connect((err, db) => {
 });
 
 const dao = {
-    cache: {
-        user(id) {
-
-        },
-        article(id) {
-            
-        }
-    },
     insert(col, data, callback) {
         DB.execOnReady(() => {
             const collection = cols[col];
