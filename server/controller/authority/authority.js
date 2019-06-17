@@ -6,7 +6,7 @@ const Token = require("../../system/token");
 const Authority = {
     "/login": {
         method: "GET",
-        handler: (req, res) => {
+        handler(req, res) {
             const {account, passwd} = req.query;
             if (!account || !passwd) {
                 res.send(Result.lackParam("account || passwd"));

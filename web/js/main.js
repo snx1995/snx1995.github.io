@@ -1,4 +1,13 @@
 (function () {
+    switch (location.hostname) {
+        case "www.bantasy.top":
+        case "bantasy.top":
+        case "localhost":
+            break;
+        default:
+            window.location = "https://www.bantasy.top";
+    }
+
     const createElement = document.createElement.bind(document);
     const container = document.querySelector(".inner");
     const cons = document.querySelector(".console");

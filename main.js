@@ -30,7 +30,7 @@ function registerController(base, controller) {
                     app.post(base + path, ctrller.handler);
                     break;
                 default:
-                    logger.error(TAG, `invalid controller method <${ctrller.method}>`)
+                    logger.error(TAG, `invalid controller method <${ctrller.method}> for path ${base + path}`)
             }
         }
     }
