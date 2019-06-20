@@ -1,32 +1,50 @@
-function Comtansy(selector, option) {
-    const $el = document.querySelector(selector);
-    if (!$el) {
-        console.error("elemen: " + selector + " not found");
-        return;
+(function () {
+    function comtansy(option) {
+        comtansy.$el = this;
     }
 
-    let comData = [];
-
-    this.data = function (comList, mapper) {
-        comData = comList;
-        comData.forEach(function (comment) {
-            let com = typeof mapper == "function" ? mapper(comment) : comment;
-            
-
-        })
+    comtansy.test = function () {
+        
     }
 
-    this.page = function (i) {
+    comtansy.data = function (data) {
 
     }
 
-    this.nextPage = function () {
+    comtansy.next = function () {
 
     }
 
-    this.prePage = function() {
+    comtansy.prev = function () {
 
     }
 
+    comtansy.page = function (page) {
 
-}
+    }
+
+    Node.prototype.comtansy = comtansy;
+
+    const option = {
+        ua: {
+            android: "来自安卓",
+            ios: "来自IOS",
+            web: "来自网页",
+            onclick(ua) {
+                // ua点击事件， 参数ua = [android, ios, web]
+
+            }
+        },
+        like: {
+            init: ["classname"],
+            liked: ["classname"],
+            hover: ["classname"],
+            onclick() {
+                
+            }
+        }
+    }
+
+    
+})()
+
