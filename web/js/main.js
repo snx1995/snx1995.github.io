@@ -1,13 +1,14 @@
 (function () {
-    switch (location.hostname) {
-        case "www.bantasy.top":
-        case "bantasy.top":
-        case "localhost":
-            break;
-        default:
-            window.location = "https://www.bantasy.top";
-    }
+    // switch (location.hostname) {
+    //     case "www.bantasy.top":
+    //     case "bantasy.top":
+    //     case "localhost":
+    //         break;
+    //     default:
+    //         window.location = "https://www.bantasy.top";
+    // }
 
+    const main = document.querySelector(".main");
     const createElement = document.createElement.bind(document);
     const container = document.querySelector(".inner");
     const cons = document.querySelector(".console");
@@ -28,6 +29,10 @@
             article: "虽然需要付出许多青春，但只要有做梦的机会，哪怕一年只有一次，我也心甘情愿。"
         }
     ]));
+
+    main.addEventListener("scroll", function (event) {
+        console.log(1);
+    })
     
     cons.addEventListener("keydown", event => {
         if (event.keyCode == 13) {
